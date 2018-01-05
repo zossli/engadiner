@@ -4,8 +4,10 @@ var pontresina = Array(787245.00, 154034.00);
 var diffMalojaPontresinaPixel = Array(1077,112);
 var rectLength = 0;
 var intervalIDLocation;
+var intervalIDDemo;
 var WIDTH_IMAGE = 2160;
-
+var trackSeg;
+var demoi = 0;
 
 function draw(elem, latitude, longitude, name, time){
     var point = $('#circle_' + elem);
@@ -114,6 +116,7 @@ function retrieveNewLocations(){
     });
 }
 function demo(){
+    clearInterval(intervalIDLocation);
     var Connect = new XMLHttpRequest();
     Connect.open("GET", "javascripts/engadiner.xml", false);
     Connect.setRequestHeader("Content-Type", "text/xml");
@@ -124,7 +127,21 @@ function demo(){
     // Place the root node in an element.
     var Positions = xmlFile.childNodes[0];
     // Retrieve each customer in turn.
-   
+    trackSeg = Positions.getElementsByTagName("trkseg")[0].children;
+    
+    intervalIDDemo = setInterval(printNext,200);
+}
+
+function printNext()
+{
+    if(demoi < trackSeg.length) {
+        draw("277893", trackSeg[demoi].getAttribute("lat"), trackSeg[demoi].getAttribute("lon"), "Reto", "now");
+        demoi++;
+    } 
+    else{
+        clearInterval(intervalIDDemo);
+        intervalIDLocation = setInterval(retrieveNewLocations, 5000);        
+    }
 }
 
 $(document).ready(
