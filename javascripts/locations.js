@@ -113,15 +113,6 @@ function retrieveNewLocations(){
         });
     });
 }
-
-$(document).ready(
-    function()
-    {
-        intervalIDLocation = setInterval(retrieveNewLocations, 5000);
-        retrieveNewLocations();
-    }
-);
-
 function demo(){
     var Connect = new XMLHttpRequest();
     Connect.open("GET", "javascripts/engadiner.xml", false);
@@ -135,3 +126,11 @@ function demo(){
     // Retrieve each customer in turn.
    
 }
+
+$(document).ready(
+    function()
+    {
+        intervalIDLocation = setInterval(retrieveNewLocations, 5000);
+        retrieveNewLocations();
+    }
+);
