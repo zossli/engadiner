@@ -4,7 +4,7 @@ var pontresina = Array(787245.00, 154034.00);
 var diffMalojaPontresinaPixel = Array(1077,112);
 var rectLength = 0;
 var intervalIDLocation;
-
+var WIDTH_IMAGE = 2160;
 
 
 function draw(elem, latitude, longitude, name, time){
@@ -28,10 +28,12 @@ function draw(elem, latitude, longitude, name, time){
 function getScreenPoint(lat, long)
 {
 
-    var diffMalojaPontresina = Array(pontresina[0]-maloja[0],pontresina[1]-maloja[1]);
-    var rotationkarte = Math.atan(diffMalojaPontresina[1]/diffMalojaPontresina[0])*180/Math.PI;
-    var rotationkarteabbildung =  Math.atan(diffMalojaPontresinaPixel[1]/diffMalojaPontresinaPixel[0])*180/Math.PI;
+        var diffMalojaPontresina = Array(pontresina[0]-maloja[0],pontresina[1]-maloja[1]);
+        var rotationkarte = Math.atan(diffMalojaPontresina[1]/diffMalojaPontresina[0])*180/Math.PI;
+        var rotationkarteabbildung =  Math.atan(diffMalojaPontresinaPixel[1]/diffMalojaPontresinaPixel[0])*180/Math.PI;
+
     var rotation = rotationkarte+rotationkarteabbildung;
+
     var diffMalojaPontresina = matrixRotation(diffMalojaPontresina[1],diffMalojaPontresina[0],rotation);
     var skalierung = diffMalojaPontresinaPixel[0]/diffMalojaPontresina[0];
 
@@ -44,13 +46,13 @@ function getScreenPoint(lat, long)
 
     var point = matrixRotation(pointx, pointy, rotation);
 
-    skalierung = skalierung/(2160/$("#svg-span").width());
+    skalierung = skalierung/(WIDTH_IMAGE/$("#svg-span").width());
 
     point = Array(point[0] * skalierung, point[1] * -skalierung);
 
 
-    point[0] = point[0]+(149/(2160/$("#svg-span").width())); //Verschiebung von Maloja...
-    point[1] = point[1]+(180/(2160/$("#svg-span").width()));
+    point[0] = point[0]+(149/(WIDTH_IMAGE/$("#svg-span").width())); //Verschiebung von Maloja...
+    point[1] = point[1]+(180/(WIDTH_IMAGE/$("#svg-span").width()));
 
     return point;
 
@@ -120,4 +122,16 @@ $(document).ready(
     }
 );
 
+function demo(){
+    var Connect = new XMLHttpRequest();
+    Connect.open("GET", "javascripts/engadiner.xml", false);
+    Connect.setRequestHeader("Content-Type", "text/xml");
+    Connect.send(null);
 
+    // Place the response in an XML document.
+    var xmlFile = Connect.responseXML;
+    // Place the root node in an element.
+    var Positions = xmlFile.childNodes[0];
+    // Retrieve each customer in turn.
+   
+}
