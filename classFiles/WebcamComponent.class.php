@@ -21,11 +21,11 @@ class WebcamComponent implements Component
         $this->__webcamlist = new WebcamList();
 
         foreach (array(
-                     "Zuoz Golf"=>"http://www.engadin-golf.ch/~webcam/zuoz.jpg?zuoz",
-                     "Zuoz" => "http://img.engadin.stmoritz.ch/object/137641/original.jpg?zuoz",
-                     "Maloja" => "http://objects.estm.xiag.ch/file/?id=137640&maloja",
-                     "St. Moritz - Clavadatsch" => "http://img.engadin.stmoritz.ch/object/69554/original.jpg?clava",
-                     "Punt-Muragl" => "http://img.engadin.stmoritz.ch/object/52092/original.jpg?muragl"
+                     "Zuoz Golf"=>"https://www.engadin-golf.ch/~webcam/zuoz.jpg?zuoz",
+                     "Zuoz" => "https://img.engadin.stmoritz.ch/object/137641/original.jpg?zuoz",
+                     "Maloja" => "https://objects.estm.xiag.ch/file/?id=137640&maloja",
+                     "St. Moritz - Clavadatsch" => "https://img.engadin.stmoritz.ch/object/69554/original.jpg?clava",
+                     "Punt-Muragl" => "https://img.engadin.stmoritz.ch/object/52092/original.jpg?muragl"
                  ) as $title => $url)
         {
             $this->__webcamlist->addWebcam(new Webcam($title,$url));
