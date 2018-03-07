@@ -13,7 +13,7 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="apple-touch-icon" href="/icon.png" />
-	<title>Engadiner - Development</title>
+	<title>Engadiner - dev</title>
 
 	<meta name="author" content="Reto Zoss" />
 	<meta name="description" content="Zum Verfolgen von Langläufern " />
