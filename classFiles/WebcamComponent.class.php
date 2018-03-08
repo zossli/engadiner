@@ -22,9 +22,11 @@ class WebcamComponent implements Component
 
         foreach (array(
                      "Zuoz Golf"=>"https://www.engadin-golf.ch/~webcam/zuoz.jpg?zuoz",
-                     "Zuoz" => "https://img.engadin.stmoritz.ch/object/137641/original.jpg?zuoz",
                      "Maloja" => "https://objects.estm.xiag.ch/file/?id=137640&maloja",
+                     "Sils Maria" => "https://img.engadin.stmoritz.ch/object/51977/full.jpg?sils",
                      "St. Moritz - Clavadatsch" => "https://img.engadin.stmoritz.ch/object/69554/original.jpg?clava",
+                     "St. Moritz / Silvaplana-Corvatsch" => "https://img.engadin.stmoritz.ch/object/6462420/full.jpg?zuoz",
+                     "Samedan Flughafen" => "https://img.engadin.stmoritz.ch/object/63355/full.jpg?samedan",
                      "Punt-Muragl" => "https://img.engadin.stmoritz.ch/object/52092/original.jpg?muragl"
                  ) as $title => $url)
         {

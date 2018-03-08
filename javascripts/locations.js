@@ -11,14 +11,13 @@ var demoi = 0;
 
 function draw(elem, latitude, longitude, name, time){
     var point = $('#circle_' + elem);
-
     if (point.length)
     {
         posit = getScreenPoint(latitude, longitude);
         point.attr("cx", posit[0]);
         point.attr("cy", posit[1]);
         $('#legend_text_' + elem).html(name + " " + time);
-        nlength = ($('#legend_text_' + elem).width() + 24);
+        nlength = (document.getElementById("legend_text_"+elem).getComputedTextLength() + 24);
         if (nlength > rectLength)
         {
             $("#rectangle").attr("width", nlength + "px");

@@ -16,7 +16,7 @@
 	<title>Engadiner</title>
 
 	<meta name="author" content="Reto Zoss" />
-	<meta name="description" content="Zum Verfolgen von Langläufern " />
+	<meta name="description" content="Zum Verfolgen von Langl&auml;ufern " />
 	<meta name="keywords"  content="Engadin Skimarathon,Engadiner,Zuoz,St. Moritz,Langlauf" />
 	<meta name="Resource-type" content="Document" />
 
@@ -67,10 +67,10 @@
             <?php echo $site->getAnchors(); ?>
             menu: '#menu',
             continuousVertical: true,
-            continuousHoricontal: true,
+            continuousHoricontal: true
 	})
 		$.fn.fullpage.setAllowScrolling(false);
-		;
+
 
     }
     function reloadFullpage () {
