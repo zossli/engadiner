@@ -25,7 +25,7 @@ class Webcam
 
     public function getWebcamDiv()
     {
-        return '<div class="slide" webcam="' . $this->title . '"><h2>' . $this->title . '</h2>
+        return '<div class="slide" webcam="' . $this->title . '">
                     <img    src="' . $this->url . '"
                             realurl="' . $this->url . '"
                             alt="' . $this->title . '"
