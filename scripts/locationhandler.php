@@ -4,7 +4,7 @@ include "../config/config.php";
 header("Content-Type:text/xml");
 
 $db = DB::getInstance();
-$stm = $db -> prepare("SELECT latitude, longitude, UNIX_TIMESTAMP(fixtime) as time, name, uniqueid FROM devices as d INNER JOIN positions as p on deviceid = d.id WHERE d.positionid = p.id");
+$stm = $db -> prepare("SELECT latitude, longitude, UNIX_TIMESTAMP(fixtime) as time, name, uniqueid FROM tc_devices as d INNER JOIN tc_positions as p on deviceid = d.id WHERE d.positionid = p.id");
 $stm -> execute();
 $rst = $stm -> get_result();
 

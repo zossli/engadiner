@@ -32,8 +32,8 @@ class MapComponent implements Component
         $stm = $db->prepare("
                             Select d.name as name, p.map_only, map_only, uniqueid 
                               from perm_dev as pd 
-                              inner join devices as d on pd.`device_id` = d.`id` 
-                              inner join positions as pos on pos.id = d.`positionid` 
+                              inner join tc_devices as d on pd.`device_id` = d.`id` 
+                              inner join tc_positions as pos on pos.id = d.`positionid` 
                               inner join `permission` as p on p.`uri`= pd.`uri` 
                             where p.`uri` = ?");
 
