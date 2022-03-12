@@ -22,12 +22,9 @@ class WebcamComponent implements Component
 
         foreach (array(
                      "Zuoz Golf"=>"https://www.engadin-golf.ch/~webcam/zuoz.jpg?zuoz",
-                     "Maloja" => "https://objects.estm.xiag.ch/file/?id=137640&maloja",
-                     "Sils Maria" => "https://img.engadin.stmoritz.ch/object/51977/full.jpg?sils",
-                     "St. Moritz - Clavadatsch" => "https://img.engadin.stmoritz.ch/object/69554/original.jpg?clava",
-                     "St. Moritz / Silvaplana-Corvatsch" => "https://img.engadin.stmoritz.ch/object/6462420/full.jpg?zuoz",
-                     "Samedan Flughafen" => "https://img.engadin.stmoritz.ch/object/63355/full.jpg?samedan",
-                     "Punt-Muragl" => "https://img.engadin.stmoritz.ch/object/52092/original.jpg?muragl"
+                     "Maloja" => "https://webcam.malojapalace.com/webcam-malojapalace.jpg?maloja",
+                     "Sils Maria" => "https://backend.roundshot.com/cams/503f5b09b092de6121fba59a9c80ab75/default?sils",
+                     "Samedan Flughafen" => "https://img.engadin.stmoritz.ch/object/63355/full.jpg?samedan"
                  ) as $title => $url)
         {
             $this->__webcamlist->addWebcam(new Webcam($title,$url));
