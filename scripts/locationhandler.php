@@ -12,7 +12,7 @@ $line = "<competitors>";
 
     while ($obj = $rst->fetch_object())
     {
-        $time = $obj->time;
+        $time = $obj->time+3600;
         $line.="<competitor><name>";
         $line.=$obj->name;
         $line.="</name> <unique>";
