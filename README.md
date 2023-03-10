@@ -10,7 +10,7 @@ Um genauer zu wissen wo die Teilnehmer gerade sind und wann sie wo ankommen, mö
 
 ## Problem
 Die Streckenkarte sieht wie folgt aus. 
-![Streckenplan](http://www.engadin-skimarathon.ch/typo3temp/_processed_/csm_Verpflegungsplan_180104_f6a059dd45.jpg)
+![Streckenplan](map.gif)
 Norden ist also nicht am oberen Rand der Karte, sondern gedreht. Somit können die GPS Koordinaten nicht einfach als Punkte eingefügt werden.
 
 ## Projekt
